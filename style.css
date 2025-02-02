@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #343541;
+    color: white;
+}
+
+.chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.chat-header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #565869;
+}
+
+.messages {
+    padding: 20px 0;
+    max-height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse; /* Permet d'afficher les nouveaux messages en haut */
+    align-items: flex-start;
+}
+
+.message {
+    display: flex;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.assistant {
+    background-color: #444654;
+}
+
+.user {
+    background-color: #343541;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    margin-right: 15px;
+    background-color: #10a37f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.user .avatar {
+    background-color: #7c7d8c;
+}
+
+.message-content {
+    flex: 1;
+}
+
+.input-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: #343541;
+    border-top: 1px solid #565869;
+}
+
+.input-box {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #565869;
+    background-color: #40414f;
+    color: white;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #10a37f;
+}
+
+button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #10a37f;
+    cursor: pointer;
+}
+
+.bot-name {
+    font-weight: bold;
+    color: #10a37f;
+}
+
+.user-name {
+    font-weight: bold;
+    color: #555;
+}
+/* Adaptation pour mobile */
+@media (max-width: 768px) {
+    .chat-container {
+        max-width: 100%;
+        height: 90vh;
+    }
+
+    input {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    button {
+        padding: 15px;
+    }
+}
+
